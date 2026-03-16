@@ -1,0 +1,41 @@
+[user]
+# 用户名：提交记录中的作者名
+name = Sheyiyuan
+# 邮箱：提交记录中的作者邮箱
+email = sheyiyuantan90@qq.com
+
+[init]
+# 新建仓库的默认主分支名
+defaultBranch = main
+
+[core]
+# 默认编辑器（用于编辑提交信息等）
+editor = nvim
+# 跨平台换行处理：提交时转为 LF，检出时保持原样
+autocrlf = input
+
+[pull]
+# 拉取时使用 rebase，保持历史更线性
+rebase = true
+
+[fetch]
+# 拉取时清理远端已删除的分支引用
+prune = true
+
+[color]
+# 自动启用彩色输出（终端支持时）
+ui = auto
+
+[alias]
+# 简洁状态（短格式 + 分支）
+st = status -sb
+# 切换分支/检出
+co = checkout
+# 切换分支/新建
+new = switch -c
+# 分支管理
+br = branch
+# 提交
+ci = commit
+# 图形化日志（单行 + 分支/标签）
+lg = log --oneline --graph --decorate --all
