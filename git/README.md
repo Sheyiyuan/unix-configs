@@ -16,12 +16,12 @@
 git --version
 ```
 
-## 使用方式（推荐：软链接）
+## 使用方式
 
-将配置文件链接到用户主目录：
+将配置文件复制到用户主目录：
 
 ```sh
-ln -sf $HOME/unix-configs/git/.gitconfig $HOME/.gitconfig
+cp $HOME/unix-configs/git/.gitconfig $HOME/.gitconfig
 ```
 
 ## 多域名配置说明
