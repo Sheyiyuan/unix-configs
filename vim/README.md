@@ -6,7 +6,7 @@
 
 1) 将配置链接到你的 `$HOME/.vimrc`：
 ```/dev/null/sh#L1-1
-ln -sf $HOME/unix-configs/vim/vimrc $HOME/.vimrc
+cp -f $HOME/unix-configs/vim/vimrc $HOME/.vimrc
 ```
 
 2) 重新打开 Vim 生效。
