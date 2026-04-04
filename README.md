@@ -4,11 +4,16 @@
 
 ## 仓库结构
 
+- `fastfetch/`：Fastfetch 系统信息工具配置
 - `git/`：Git 全局配置
 - `gnome-shortcuts-backup/`：GNOME 快捷键配置备份
 - `kitty/`：Kitty 终端配置与主题
+- `matugen/`：Matugen 主题生成工具配置
+- `niri/`：Niri 窗口管理器配置
 - `nvim/`：Neovim 配置
 - `vim/`：Vim 配置
+- `waybar/`：Waybar 状态栏配置
+- `waypaper/`：Waypaper 壁纸管理工具配置
 - `zsh/`：Zsh 配置
 
 ## 快速开始
@@ -57,6 +62,42 @@ sudo update-alternatives --set editor /usr/bin/vim.basic
 
 **说明**：脚本会自动复制 vimrc 到当前用户和 root 用户，并设置系统默认编辑器。
 
+### Waybar 配置
+
+```sh
+mkdir -p ~/.config/waybar
+cp -rf ~/unix-configs/waybar/* ~/.config/waybar/
+```
+
+### Niri 配置
+
+```sh
+mkdir -p ~/.config/niri
+cp -f ~/unix-configs/niri/config.kdl ~/.config/niri/config.kdl
+cp -rf ~/unix-configs/niri/scripts ~/.config/niri/
+```
+
+### Matugen 配置
+
+```sh
+mkdir -p ~/.config/matugen
+cp -rf ~/unix-configs/matugen/* ~/.config/matugen/
+```
+
+### Fastfetch 配置
+
+```sh
+mkdir -p ~/.config/fastfetch
+cp -f ~/unix-configs/fastfetch/config.jsonc ~/.config/fastfetch/
+```
+
+### Waypaper 配置
+
+```sh
+mkdir -p ~/.config/waypaper
+cp -f ~/unix-configs/waypaper/config.ini ~/.config/waypaper/
+```
+
 ### GNOME 快捷键
 
 ```sh
@@ -71,6 +112,9 @@ dconf load /org/gnome/desktop/wm/keybindings/ < wm-keybindings.ini
 
 1. **GNOME 快捷键**：`gnome-shortcuts-backup/media-keys.ini` 中的应用程序路径
 2. **Git 配置**：`.gitconfig` 中的用户名和邮箱
+3. **Niri 配置**：`niri/config.kdl` 中的脚本路径
+4. **Waybar 配置**：`waybar/scripts/` 中的脚本路径
+5. **Matugen 配置**：`matugen/config.toml` 中的壁纸命令路径
 
 批量替换路径示例：
 
@@ -118,6 +162,19 @@ nvim --version  # 检查版本
 1. 确保在 GNOME 桌面环境中运行
 2. 注销并重新登录
 3. 检查应用程序路径是否正确
+
+### 5. Waybar 图标显示为方块
+
+确保已安装 Nerd Font 并在 Waybar 配置中指定：
+
+```sh
+# 安装 Nerd Font
+yay -S ttf-jetbrains-mono-nerd
+```
+
+### 6. Niri 配置路径调整
+
+Niri 配置中部分脚本路径可能需要根据实际情况调整，修改 `config.kdl` 中的 `Spawn` 命令路径。
 ---
 
 欢迎按需参考或 Fork 使用。
